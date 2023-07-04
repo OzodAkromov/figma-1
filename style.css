@@ -140,313 +140,342 @@ body {
 }
 
 /* services */
-
-.services .container:first-child{
-  float: left;
+.services {
   background: #2f343a;
-  width: 100%;
-  height: 100vh;
+  color: #ffffff;
+  padding: 120px 0;
+  position: relative;
+  z-index: 1;
 }
 
-.services .container .block {
-  border: 1px solid #393F47;
+.services::before {
+  content: '';
+  width: 555px;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: -1;
   background: #393F47;
-  width: 560px;
-  height: 600px;
 }
 
-.services .container .block-2{
-  border: 1px solid #393F47;
+.services::after{
+  content: '';
+  width: 555px;
+  height: 100%;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: -1;
   background: #393F47;
-  width: 560px;
-  height: 600px;
-  margin-left: 171.5%;
 }
 
-.services .container .border {
-  border: 3px solid #c8a35f;
+.services .container .line {
   width: 90px;
-  margin-left: 206px;
-  margin-top: -500px;
-}
-
-.services .container .service-text h1{
-  font-size: 60px;
-  font-weight: 700;
-  margin-left: 206px;
-  margin-top: 30px;
-  color: #ffffff;
-}
-
-.services .container .service-text p{
-  font-size: 18px;
-  line-height: 28px;
-  margin-left: 206px;
-  margin-top: 20px;
-  color: #ffffff;
-}
-
-.services .container .btn {
-  border: 1px solid #c8a35f;
+  height: 6px;
   background: #c8a35f;
-  color: #ffffff;
+}
+
+.services .container .title {
+  font-size: 40px;
+  line-height: 50px;
+  text-transform: uppercase;
+  padding: 40px 0 60px;
+}
+
+.services .container .subtitle {
+  font-size: 18px;
+  line-height: 22px;
+  text-transform: uppercase;
+  margin: -20px 0 -60px;
+}
+
+.services .container .hover-btn {
+  margin-top: 100px;
+  border: 1px solid #2f343a;
+  background: #2f343a;
   width: 220px;
   height: 55px;
-  margin-left: 206px;
-  margin-top: 30px;
-  padding: 10px;
+  cursor: pointer;
+  transition: 0.2s;
 }
 
-.services .container .btn .btn-hover {
-  font-size: 16px;
-  font-weight: 500;
+.services .container .hover-btn p {
   text-align: center;
-  margin: 8px;
+  padding: 18px;
 }
 
-.services .container .service-image img{
-  margin-left: 650px;
-  margin-top: -340px;
-
+.services .container .hover-btn:hover {
+  background: #c8a35f;
 }
 
-.services .container .next {
-  margin-left: 1080px;
-  margin-top: -800px;
+.services .container .car-image {
+  float: right;
+  margin-right: 190px;
+  margin-top: -253px;
 }
 
-.services .container .right {
-  margin-left: 50px;
+.services .container .next-png {
+  float: right;
+  margin-left: 500px;
   margin-top: -300px;
 }
 
-.services .container .back {
-  margin-left: 1080px;
-  margin-top: 230px;
-}
-
-.services .container .left {
-  margin-left: 50px;
+.services .container .back-png {
+  float: right;
+  margin-left: 505px;
+  margin-top: -30px;
 }
 
 /* item */
-
-.item .container {
-  background-color: #2f343a;
-  width: 100%;
-  height: 1050px;
-}
-
-.item .container .line {
-  border: 1px solid #c8a35f;
-  border: 3px solid #c8a35f;
-  width: 90px;
-  margin-left: 206px;
-  margin-top: 300px;
-}
-
-.text {
-  font-weight: 700;
-  line-height: 50px;
-  margin-left: 206px;
-  margin-top: 30px;
-  font-size: 40px;
+.item {
+  background: #2f343a;
   color: #ffffff;
+  padding: 120px 0;
+  position: relative;
 }
 
-.item .container .pilot {
-  border: 1px solid #c8a35f;
+.item .container .border {
+  width: 90px;
+  height: 6px;
   background: #c8a35f;
+}
+
+.item .container .title {
+  font-size: 40px;
+  line-height: 50px;
+  text-transform: uppercase;
+  padding: 40px 0 60px;
+}
+
+.item .container .wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1px;
+}
+
+.item .container .wrapper .card {
   width: 276px;
   height: 180px;
-  margin-left: 206px;
-  margin-top: 80px;
+  background: #393F47;
+  text-align: center;
+  padding: 35px;
+  transition: 0.2s
 }
 
-.item .container .pilot .sircle {
-  border: 1px solid #ffffff;
-  background: #ffffff;
+.item .container .wrapper .card:hover {
+  cursor: pointer;
+  background: #c8a35f;
+}
+
+.item .container .wrapper .card .image-block {
   width: 70px;
   height: 70px;
+  margin: 0 auto 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   border-radius: 50%;
+  transition: 0.2s;
+}
+
+.item .container .wrapper .card:hover .image-block {
+  background: #ffffff;
+}
+
+.item .container .wrapper .card .image-block .img {
+  width: 70px;
+  height: 70px;
+  background-image: url(./images/Group.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: 0.2s;
+}
+
+.item .container .wrapper .card:hover .image-block .img {
+  background-image: url(./images/airplane-dark.png);
+}
+
+.item .container .wrapper .card .subtitle {
+  font-size: 18px;
+  line-height: 22px;
+  text-transform: uppercase;
+}
+
+/* about */
+.about {
+  background: #2f343a;
+  color: #ffffff;
+  height: 600px;
+  position: relative;
+  z-index: 1;
+}
+
+.about .container .before {
+  border: 1px solid #393F47;
+  background: #393F47;
+  width: 410px;
+  height: 482px;
   margin: 0 auto;
-  margin-top: 50px;
 }
 
-.item .container .pilot .sircle .air{
-  margin-left: 18px;
+.about .container .line {
+  width: 90px;
+  height: 6px;
+  background: #c8a35f;
+  margin-top: -420px;
+}
+
+.about .container .title {
+  text-transform: uppercase;
+  margin-top: 40px;
+  font-size: 40px;
+}
+
+.about .container .lorem {
+  margin-top: 15px;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.about .container .about-office .border{
+  border: 1px solid #C8A35F;
+  background: #ffffff;
+  width: 200px;
+  height: 160px;
+  margin-left: 520px;
+  margin-top: -300px;
+}
+
+.about .container .about-office .border .number {
+  font-size: 64px;
+  color: #2f343a;
+  display: flex;
+  justify-content: center;
   margin-top: 20px;
-}
-
-.item .container .pilot .air-text {
-  text-align: center;
-  font-size: 18px;
-  color: #ffffff;
+  line-height: 75px;
   font-weight: 700;
-  margin-top: 12px;
 }
 
-.item .container .pilot-2 {
-  border: 1px solid #393F47;
-  background: #393F47;
-  width: 276px;
-  height: 180px;
-  margin-left: 276px;
-  margin-top: -155px;
-}
-
-.item .container .pilot-2 .air-2 {
-  margin-left: 120px;
-  margin-top: 73px;
-}
-
-.item .container .pilot-2 .air-text-2 {
-  text-align: center;
+.about .container .about-office .border .subtitle {
+  color: #000000;
   font-size: 18px;
-  color: #ffffff;
-  font-weight: 700;
-  margin-top: 25px;
-}
-
-.item .container .pilot-3 {
-  border: 1px solid #393F47;
-  background: #393F47;
-  width: 276px;
-  height: 180px;
-  margin-left: 553px;
-  margin-top: -180px;
-}
-
-.item .container .pilot-3 .air-3 {
-  margin-left: 120px;
-  margin-top: 73px;
-}
-
-.item .container .pilot-3 .air-text-3 {
+  line-height: 22px;
   text-align: center;
-  font-size: 18px;
-  color: #ffffff;
-  font-weight: 700;
-  margin-top: 25px;
 }
 
-.item .container .pilot-4 {
-  border: 1px solid #393F47;
-  background: #393F47;
-  width: 276px;
-  height: 180px;
-  margin-left: 830px;
-  margin-top: -180px;
-}
-
-.item .container .pilot-4 .air-4 {
-  margin-left: 120px;
-  margin-top: 73px;
-}
-
-.item .container .pilot-4 .air-text-4 {
+.about .container .about-office .border .europ {
+  color: #000000;
+  font-size: 12px;
   text-align: center;
-  font-size: 18px;
-  color: #ffffff;
+  margin-top: 10px;
+}
+
+.about .container .about-office .border:last-child {
+  margin-left: 720px;
+  margin-top: -160px;
+}
+
+.about .container .car {
+  margin-left: 920px;
+  margin-top: -160px;
+}
+
+.about .container .car-2 {
+  margin-left: 520px;
+  margin-top: -4px;
+}
+
+.about .container .border-2 {
+  border: 1px solid #C8A35F;
+  background: #ffffff;
+  width: 200px;
+  height: 160px;
+  margin-left: 720px;
+  margin-top: -164px;
+}
+
+.about .container .border-2 .number-2 {
+  font-size: 55px;
+  color: #2f343a;
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  line-height: 75px;
   font-weight: 700;
-  margin-top: 25px;
 }
 
-.item .container .pilot-5 {
-  border: 1px solid #393F47;
-  background: #393F47;
-  width: 276px;
-  height: 180px;
-  margin-left: -0.3px;
-  margin-top: 2px;
-}
-
-.item .container .pilot-5 .air-5 {
-  margin-left: 120px;
-  margin-top: 73px;
-}
-
-.item .container .pilot-5 .air-text-5 {
+.about .container .border-2 .subtitle-2 {
+  color: #000000;
+  font-size: 18px;
+  line-height: 22px;
   text-align: center;
-  font-size: 18px;
-  color: #ffffff;
-  font-weight: 700;
-  margin-top: 25px;
 }
 
-.item .container .pilot-6 {
-  border: 1px solid #393F47;
-  background: #393F47;
-  width: 276px;
-  height: 180px;
-  margin-left: 276px;
-  margin-top: -180px;
-}
-
-.item .container .pilot-6 .air-6 {
-  margin-left: 120px;
-  margin-top: 73px;
-}
-
-.item .container .pilot-6 .air-text-6 {
+.about .container .border-2 .europ-2 {
+  color: #000000;
+  font-size: 12px;
   text-align: center;
-  font-size: 18px;
+  margin-top: 10px;
+  width: 100%;
+  position: relative;
+}
+
+.map {
+  background-image: url(./images/maps.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  padding: 205px 0 155px;
+}
+
+/* footer */
+.footer {
   color: #ffffff;
-  font-weight: 700;
-  margin-top: 25px;
+  background: #C8A35F;
+  width: 100%;
+  height: 151px;
 }
 
-.item .container .pilot-7 {
-  border: 1px solid #393F47;
-  background: #393F47;
-  width: 276px;
-  height: 180px;
-  margin-left: 553px;
-  margin-top: -180px;
+.footer .container .logo {
+  margin-top: 55px;
 }
 
-.item .container .pilot-7 .air-7 {
-  margin-left: 120px;
-  margin-top: 73px;
+.footer .container .footer-text {
+  color: #F2F2F2;
+  font-size: 14px;
+  line-height: 17px;
+  margin-left: 215px;
+  margin-top: -48px;
 }
 
-.item .container .pilot-7 .air-text-7 {
+.footer .container .email {
+  margin-left: 215px;
+  font-size: 14px;
+  color: #2F343A;
+  margin-top: 10px;
+}
+
+.footer .container .phone-number {
   text-align: center;
-  font-size: 18px;
-  color: #ffffff;
-  font-weight: 700;
-  margin-top: 25px;
+  margin-left: 300px;
+  margin-top: -40px;
 }
 
-.item .container .pilot-8 {
-  border: 1px solid #393F47;
-  background: #393F47;
-  width: 276px;
-  height: 180px;
-  margin-left: 830px;
-  margin-top: -180px;
-}
-
-.item .container .pilot-8 .air-8 {
-  margin-left: 120px;
-  margin-top: 73px;
-}
-
-.item .container .pilot-8 .air-text-8 {
+.footer .container .phone-number-2 {
   text-align: center;
-  font-size: 18px;
-  color: #ffffff;
-  font-weight: 700;
-  margin-top: 25px;
+  margin-left: 300px;
+  margin-top: 5px;
 }
 
-
-
-
-
-
-
-
+.footer .container .happy-end {
+  color: #2F343A;
+  text-align: center;
+  margin-left: 900px;
+  margin-top: -18px;
+}
 
 
 
