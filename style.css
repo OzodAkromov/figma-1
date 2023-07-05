@@ -219,6 +219,7 @@ body {
   float: right;
   margin-left: 500px;
   margin-top: -300px;
+  cursor: pointer;
 }
 
 .services .container .next {
@@ -234,6 +235,7 @@ body {
   float: right;
   margin-right: 75px;
   margin-top: -30px;
+  cursor: pointer;
 }
 
 .services .container .back {
