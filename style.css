@@ -221,10 +221,28 @@ body {
   margin-top: -300px;
 }
 
+.services .container .next {
+  color: #C8A35F;
+  float: right;
+  font-size: 16px;
+  font-weight: 500;
+  margin-top: -299px;
+  margin-right: 100px;
+}
+
 .services .container .back-png {
   float: right;
-  margin-left: 505px;
+  margin-right: 75px;
   margin-top: -30px;
+}
+
+.services .container .back {
+  color: #C8A35F;
+  float: right;
+  font-size: 16px;
+  font-weight: 500;
+  margin-top: -29px;
+  margin-left: 5px;
 }
 
 /* item */
@@ -421,14 +439,6 @@ body {
   margin-top: 10px;
   width: 100%;
   position: relative;
-}
-
-.map {
-  background-image: url(./images/maps.png);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  padding: 205px 0 155px;
 }
 
 /* footer */
